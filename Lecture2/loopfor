@@ -1,0 +1,27 @@
+n = 10
+
+for i in range(n):
+    print(i)
+print('----------------------------')
+
+for i in range(n):
+    for j in range(n):
+        print(i, j)
+print('----------------------------')
+
+for i in range(n):
+    for j in range(i, n):
+        print(i, j)
+print('----------------------------')
+
+for i in range(n/10):
+    print('Start', i)
+    for j in range(i):
+        print(i, j)
+print('----------------------------')
+
+for i in range(0,n,i=i*2):
+    print('Start', i)
+    for j in range(i):
+        print(i, j)
+print('----------------------------')
