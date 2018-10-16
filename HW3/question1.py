@@ -40,7 +40,7 @@ class Node:
         self.data = new_data
 
     def setKey(self,new_key):
-        self.data = new_key
+        self.key = new_key
 
     def setNext(self,new_next):
         self.next = new_next
