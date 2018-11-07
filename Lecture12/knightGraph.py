@@ -1,4 +1,6 @@
-from Graph import Graph
+# from Graph import Graph
+from pythonds.graphs import Graph
+
 
 def genLegalMoves(x,y,bdSize):
     newMoves = []
@@ -12,11 +14,13 @@ def genLegalMoves(x,y,bdSize):
             newMoves.append((newX,newY))
     return newMoves
 
+
 def legalCoord(x,bdSize):
     if x >= 0 and x < bdSize:
         return True
     else:
         return False
+
 
 def knightGraph(bdSize):
     ktGraph = Graph()
@@ -28,6 +32,7 @@ def knightGraph(bdSize):
                nid = posToNodeId(e[0],e[1],bdSize)
                ktGraph.addEdge(nodeId,nid)
     return ktGraph
+
 
 def posToNodeId(row, column, board_size):
     return (row * board_size) + column
