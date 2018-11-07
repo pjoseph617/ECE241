@@ -1,5 +1,7 @@
 from pythonds.graphs import Graph, Vertex
 from pythonds.basic import Queue
+from buckets import buildGraph
+
 
 def bfs(g,start):
   start.setDistance(0)
@@ -15,6 +17,7 @@ def bfs(g,start):
         nbr.setPred(currentVert)
         vertQueue.enqueue(nbr)
     currentVert.setColor('black')
+    print(currentVert)  # prints the status of the current visited vertex
 
 def traverse(y):
     x = y
@@ -23,4 +26,7 @@ def traverse(y):
         x = x.getPred()
     print(x.getId())
 
-traverse(g.getVertex('sage'))
+g = Graph()
+g = buildGraph('wordFile.txt')
+
+bfs(g,g.getVertex('fool'))
